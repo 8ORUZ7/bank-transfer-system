@@ -1,0 +1,37 @@
+@import '../../Helper/helper.scss';
+
+.home {
+  display: flex;
+  background-color: #1f1f1f; // dark background
+  color: #e0e0e0; // light text by default
+
+  .homeContainer {
+    flex: 6;
+    background-color: #1f1f1f; // dark background
+    color: #e0e0e0; // light text by default
+    
+    .widgets,
+    .charts {
+      display: flex;
+      padding: 1.25rem;
+      gap: 1.25rem;
+    }
+
+    .charts {
+      padding: 0.313rem 1.25rem;
+    }
+
+    .listContainer {
+      @include Shadow();
+      margin: 1.25rem;
+      background-color: #2a2a2a; // Widget/list background
+
+      .listTitle {
+        font-weight: 500;
+        color: $white; // Changed from gray to white for visibility
+        margin-bottom: 0.938rem;
+        background-color: #2b2b2b;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "admin",
+    "email": "admin@example.com",
+    "phone": "+1 2345678",
+    "password": "password",
+    "identificationType": "passport",
+    "identificationNumber": "admin123",
+    "balance": 80000,
+    "address": "address random",
+    "isVerified": true,
+    "isAdmin": true
+  },
+  {
+    "name": "user",
+    "email": "userone@example.com",
+    "phone": "+12 3456 7890",
+    "password": "access01",
+    "identificationType": "driver license",
+    "identificationNumber": "user01",
+    "balance": 5000,
+    "address": "random address",
+    "isVerified": true,
+    "isAdmin": false
+  },
+  {
+    "name": "user",
+    "email": "usertwo@example.com",
+    "phone": "+19 8765 4321",
+    "password": "access02",
+    "identificationType": "passport",
+    "identificationNumber": "nonsense",
+    "balance": 4000,
+    "address": "random address",
+    "isVerified": true,
+    "isAdmin": false
+  }
+]

@@ -1,0 +1,66 @@
+@import '../../Helper/helper.scss';
+
+.transaction {
+  display: flex;
+  width: 100%;
+
+
+  .transactionContainer {
+    flex: 6;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+
+    .transactions {
+      padding: 1.25rem;
+
+      h1 {
+        @include headingOne();
+        color: #e0e0e0; // light heading color on dark background
+      }
+
+      .transactionsList {
+        @include Shadow();
+        background-color: #1e1e1e; // dark card background
+
+        .table {
+          background-color: #2b2b2b;
+          .tableCell {
+            .deposit {
+              @include transactionStatus($depositBg, $depositColor);
+            }
+            .transfer {
+              @include transactionStatus($transferBg, $transferColor);
+            }
+            .payment {
+              @include transactionStatus($paymentBg, $paymentColor);
+            }
+            .refund {
+              @include transactionStatus($refundBg, $refundColor);
+            }
+          }
+
+          .tableHead {
+            @include tableHead();
+            background-color: #2a2a2a; // darker table header
+            color: #e0e0e0;
+          }
+
+          @include dateAndTime();
+
+          .cellWrapper {
+            @include cellWrapper();
+            background-color: #2b2b2b; // cell background for dark mode
+          }
+        }
+
+        .singleTab.Mui-selected {
+          color: $primaryColor;
+        }
+
+        .MuiTabs-indicator {
+          background-color: $primaryColor;
+        }
+      }
+    }
+  }
+}

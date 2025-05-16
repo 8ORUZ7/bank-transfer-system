@@ -1,0 +1,19 @@
+.chart {
+  flex: 4;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(40, 40, 40, 0.6); // darker tone for dark mode
+  background-color: #1e1e1e; // dark background
+  padding: 0.625rem;
+  color: #000000; // light gray for text on dark background
+
+  .title {
+    margin-bottom: 1.2rem;
+    color: #fff9f9; // brighter title for contrast
+    background-color: #1e1e1e;
+  }
+
+  .chartGrid {
+    stroke: #333; // darker grid stroke for subtle lines
+    color: #000000; // brighter title for contrast
+  }
+}

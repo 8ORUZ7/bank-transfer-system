@@ -1,0 +1,24 @@
+@import '../../Helper/helper.scss';
+
+.notFound {
+  height: 100vh;
+  background-color: #121212; // Dark background
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3rem;
+  color: $primaryColor;
+
+  .notFoundLink {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+
+    p {
+      color: $primaryColor;
+      margin-top: 1rem;
+      text-decoration: underline;
+    }
+  }
+}

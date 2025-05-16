@@ -1,0 +1,63 @@
+@import '../../Helper/helper.scss';
+
+.request {
+  display: flex;
+  width: 100%;
+
+  .requestContainer {
+    flex: 6;
+    background-color: #1e1e1e;
+
+    .requests {
+      padding: 1.25rem;
+
+      h1 {
+        @include headingOne();
+        color: #e0e0e0; // light heading color on dark
+      }
+
+      .requestsList {
+        @include Shadow();
+        background-color: #1e1e1e; // dark background for box
+
+        .tableHead {
+          @include tableHead();
+          background-color: #2a2a2a; // darker table head
+          color: #dddddd; // light text
+        }
+
+        @include dateAndTime();
+        .cellWrapper {
+          @include cellWrapper();
+          background-color: #2a2a2a; // optional cell background
+        }
+
+        .accept {
+          @include requestStatus($primaryColor, $white);
+          cursor: pointer;
+        }
+
+        .pending {
+          @include requestStatus($pendingBg, $pendingColor);
+        }
+
+        .paid {
+          @include requestStatus($paidBg, $paidColor);
+          cursor: pointer;
+        }
+
+        .accepted {
+          @include requestStatus($acceptedBg, $acceptedColor);
+        }
+      }
+    }
+  }
+
+  .singleTab.Mui-selected {
+    color: $primaryColor;
+  }
+
+  .MuiTabs-indicator {
+    background-color: $primaryColor;
+  }
+}

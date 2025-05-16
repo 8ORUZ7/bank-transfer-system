@@ -1,0 +1,40 @@
+@import '../../Helper/helper.scss';
+
+.list {
+  display: flex;
+  width: 100%;
+  background-color: #121212; // Dark background
+
+  .listContainer {
+    flex: 6;
+
+    .usersList {
+      padding: 1.25rem;
+      background-color: #1e1e1e; // Slightly lighter section
+
+      h1 {
+        @include headingOne();
+        color: $white;
+      }
+
+      .usersListContainer {
+        @include Shadow();
+        background-color: #1e1e1e;
+
+        .tableHead {
+          @include tableHead();
+        }
+
+        button {
+          @include requestStatus($verifiedBg, $white);
+          cursor: pointer;
+        }
+
+        .verifyBtn {
+          @include requestStatus($primaryColor, $white);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

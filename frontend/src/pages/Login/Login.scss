@@ -1,0 +1,79 @@
+@import '../../Helper/helper.scss';
+
+.login {
+  height: 100vh;
+  background-color: #121212; // Dark background
+  color: $white; // General text color
+  font-weight: 500;
+  flex-direction: column;
+  @include flexPreset();
+
+  a {
+    text-decoration: underline;
+    color: $primaryColor;
+  }
+
+  .login__container {
+    min-width: 600px;
+    background-color: #1e1e1e; // Container background
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  }
+
+  .login__header {
+    margin-bottom: 30px;
+    h1 {
+      margin-bottom: 0.625rem;
+      text-transform: capitalize;
+    }
+    p {
+      color: #bbbbbb; // Adjusted for better contrast in dark mode
+    }
+  }
+
+  .form__control {
+    width: 100%;
+    input,
+    select {
+      margin-bottom: 1.25rem;
+      @include formInputStyle(100%);
+      background-color: #2a2a2a; // Input background for dark mode
+      color: $white;
+
+      &::placeholder {
+        @include placeHolder();
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 0.313rem;
+    border: none;
+    outline: none;
+    background-color: $primaryColor;
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    margin-bottom: 0.625rem;
+
+    &:hover {
+      background-color: $primaryHover;
+    }
+  }
+
+  .small__text {
+    text-align: center;
+    color: #bbbbbb; // Softer light gray for dark backgrounds
+    font-size: 14px;
+
+    .registerLink {
+      text-decoration: none;
+      color: $primaryColor;
+    }
+  }
+}

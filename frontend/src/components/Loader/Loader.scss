@@ -1,0 +1,8 @@
+@import '../../Helper/helper.scss';
+
+.circularProgressContainer {
+  @include flexPreset();
+  .progressLoader {
+    color: $primaryColor;
+  }
+}

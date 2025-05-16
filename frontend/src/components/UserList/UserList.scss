@@ -1,0 +1,58 @@
+@import '../../Helper/helper.scss';
+
+.table {
+  background-color: #1e1e1e; // Dark background
+  color: #e0e0e0; // Light text color for contrast
+
+  .tableCell {
+    font-family: inherit;
+    font-weight: 500;
+    background-color: #1e1e1e; // Dark background
+    color: #e0e0e0; // Light text color for contrast
+  }
+
+  .tableHead {
+    @include tableHead();
+    background-color: #2c2c2c;
+    color: #ffffff;
+  }
+
+  .cellWrapper {
+    @include cellWrapper;
+  }
+
+  .image {
+    @include userImage;
+    border: 2px solid #444; // subtle border on dark
+  }
+
+  .status {
+    @include Status;
+    &.Approved {
+      @include buttonSend();
+      background-color: darken($primaryColor, 10%);
+      color: #ffffff;
+    }
+    &.Pending {
+      @include buttonRequest();
+      background-color: #555555;
+      color: #ffd700;
+    }
+  }
+
+  .send,
+  .req {
+    @include buttonStyleOne();
+    color: #ffffff;
+  }
+
+  .send {
+    @include buttonSend();
+    background-color: darken($primaryColor, 10%);
+  }
+
+  .req {
+    @include buttonRequest();
+    background-color: #555555;
+  }
+}

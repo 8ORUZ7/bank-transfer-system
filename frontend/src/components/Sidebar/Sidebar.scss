@@ -1,0 +1,61 @@
+@import '../../Helper/helper.scss';
+
+.sidebar {
+  flex: 0.6;
+  border-right: 0.4px solid #333; // darker border
+  min-height: 100vh;
+  background-color: #1e1e1e; // dark background
+
+  .top {
+    @include flexPreset();
+    height: 50px;
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff; // white logo text
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.4px solid #333; // subtle separator
+  }
+
+  .center {
+    ul {
+      list-style-type: none;
+
+      .title {
+        font-size: 0.625rem;
+        font-weight: 700;
+        color: #aaaaaa; // lighter gray
+        margin: 1rem 0 1rem 0.3rem;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0.3rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05); // subtle hover effect
+        }
+
+        .icon {
+          font-size: 1.1rem;
+          color: $primaryColor; // retain brand primary
+        }
+
+        span {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: #cccccc; // lighter text
+          margin-left: 0.625rem;
+        }
+      }
+    }
+  }
+}

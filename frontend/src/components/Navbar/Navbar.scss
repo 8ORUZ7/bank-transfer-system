@@ -1,0 +1,76 @@
+@import '../../Helper/helper.scss';
+
+.navbar {
+  height: 4rem;
+  border-bottom: 0.5px solid #444; // darker border
+  display: flex;
+  align-items: center;
+  font-size: 0.87rem;
+  color: #ddd; // light text color on dark background
+  background-color: #1e1e1e; // navbar background
+
+  .wrapper {
+    padding: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: 1px solid #555; // darker border
+      padding: 0.313rem;
+      border-radius: 0.313rem;
+      background-color: rgba(255, 255, 255, 0.05); // subtle dark background
+      width: 30%;
+
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        flex: 1;
+        font-weight: 600;
+        color: #eee;
+
+        &::placeholder {
+          font-size: 0.75rem;
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  .items {
+    display: flex;
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-right: 1.25rem;
+      position: relative;
+
+      &.admin {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+      }
+
+      p {
+        font-weight: 600;
+        margin-top: 0.2rem;
+        color: #ccc;
+      }
+
+      .icon {
+        font-size: 1.25rem;
+        color: #ddd;
+      }
+
+      .avatar {
+        @include userImage();
+        border: 2px solid #555; // optional for contrast
+      }
+    }
+  }
+}
