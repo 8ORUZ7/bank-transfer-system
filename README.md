@@ -1,16 +1,26 @@
-# bank-transfer-system
-finals, software engineering 1 / fundamentals of database system
+# bank-transfer-system (in progress)
 
-mern
-| feature            | subfeatures                                       | optional |
-|--------------------|---------------------------------------------------|----------|
-| **user authentication** | - sign up / login  <br> - jwt-based auth         | no       |
-| **user dashboard**      | - view current balance  <br> - transaction history | no       |
-| **send money**          | - transfer funds to another user  <br> - validate amount, recipient, balance | no |
-| **receive money**       | - automatically updates balance                  | no       |
-| **notifications**       | - email or in-app for transactions              | yes      |
-| **admin panel**         | - monitor transactions  <br> - manage users      | yes      |
+A simple node.js + express api for handling user transactions in a bank transfer system using mongodb and mongoose.
 
+## features
 
+### request money (working)
+- `POST /api/transfer`
+- users can **request** money from other users.
+- sender is asked to pay the user who requested.
+- only **request functionality** works currently.
+
+## in progress
+
+the following features are under development:
+- 🔄 **transfer**: sending money between users.
+- 💰 **deposit funds**
+- 📜 **get all transactions**
+- 📤 **get sent transactions**
+- 📥 **get received transactions**
+
+## sample output
+
+<img src="https://raw.githubusercontent.com/8ORUZ7/bank-transfer-system/refs/heads/main/frontend/public/bank-transfer-system.gif" alt="" width="70%"/>
 
 
